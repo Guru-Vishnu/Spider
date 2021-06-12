@@ -1,0 +1,10 @@
+Explanation of Logic behind the Programs:
+
+Task 1A:
+The program reads the length of the string and the string containing the binary value of a number. Since it is given that the binary number must be of the given length and leading zeroes are not allowed, the lower and the upper limit is calculated.
+
+Task 1B:
+
+Task 1C:
+
+Task 1D:
