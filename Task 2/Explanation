@@ -1,0 +1,13 @@
+Explanation of Logic Behind the Programs:
+
+Task 2A:
+
+Before reading a line in the pattern, variables check and flag are set to zero. Variable check helps in keeping track of '<' and '>' in a line. Its value is incremented for every occurence of '<' and decremented for every occurence of '>'. 
+
+Each line of the pattern is read character by character. The character read from the input stream is storedd in variable c. If c is '<', the check variable is incremented. An if statement checks whether the check variable is zero after the incrementation step. If it turns out to be zero, it implies that the check variable was negative earlier. Or in other words, there were more number of '>' than '<' before the current character. This is a sign of discontinuity in the pattern and hence the program should no longer increase the count. This sets the flag value of 1. 
+
+If c is '>', the check variable is decremented. An if block checks whether check variable is greater than or equal to zero and whether flag is equal to zero. The first condition implies that till the current character there were greater or equal number of '<' than '>'. Now, with each occurence of '>', a pair is closed and hence the value of the count variable is increased by 2. In addition to the previous condition, it is ensured that the flag variable is still 0.
+
+Before finishing off the current line, a final if statement checks whether the check variable is positive or not. If it turns out to be positive, this implies that there were more number of '<' than '>' which means an incomplete pattern. This sets the count variable to be zero.
+
+Throughout this explanation, the count variable mentioned is actually an element corresponding to the particular line in the vector named count. 
